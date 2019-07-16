@@ -1,11 +1,11 @@
 # v10-bears-team-14
 Add-project-description-here | Voyage-10 | https://chingu.io/
 
-#Learning Hub
+# Learning Hub
 This is a platform where people can share their own learning paths and
 join in some participations.
 
-#How to run it
+# How to run it
 1. Ensure that node.js and npm have been installed.
 2. Git clone this repo
 3. Install following dependencies: 
