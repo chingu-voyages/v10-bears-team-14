@@ -1,0 +1,13 @@
+#loginForm
+{
+    border-color: black;
+    border-style: dot-dash;
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    left: 500px;
+    top:300px;
+}
+
+
