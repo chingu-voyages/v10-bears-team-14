@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap-theme.css'
-import './Register.css'
+import '../../assets/css/Register.css'
 
 class RegisterForm extends React.Component{
     render() {

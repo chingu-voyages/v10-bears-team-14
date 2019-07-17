@@ -1,13 +1,13 @@
 import React from 'react'
 import LoginForm from './LoginForm'
-import LoginHeader from './LoginHeader'
+import Header from '../../templates/Header'
 
 class LoginPage extends React.Component{
     render()
     {
         return(
             <div>
-                <LoginHeader />
+                <Header />
                 <br />
                 <br />
                 <LoginForm />

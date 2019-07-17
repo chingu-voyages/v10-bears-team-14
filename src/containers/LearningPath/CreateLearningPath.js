@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
+import Header from '../../templates/Header';
 
 export default class CreateLearningPath extends Component {
 
     render() {
         return (
+            <React.Fragment>
+            <Header />
             <div className='container'>
                 <h1 style={{ textAlign: "center" }}>Create a Learning Path</h1>
                 <form className='col-md-8 col-md-offset-2'>
@@ -56,6 +59,7 @@ export default class CreateLearningPath extends Component {
 
                 </form>
             </div>
+            </React.Fragment>
         )
     }
 }
