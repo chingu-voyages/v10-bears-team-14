@@ -15,10 +15,10 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App">
-          {/* <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/login" component={LoginPage} />
-          <Route path="/register" component={RegisterPage} /> */}
-          <CreateLearningPath />
+          <Route path="/register" component={RegisterPage} />
+          {/* <CreateLearningPath /> */}
         </div>
       </Router>
     </Provider>
