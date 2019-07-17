@@ -1,13 +1,13 @@
 import React from 'react'
 import RegisterForm from './RegisterForm.js'
-import RegisterHeader from "./RegisterHeader";
+import Header from "../../templates/Header";
 
 class RegisterPage extends React.Component{
     render()
     {
         return(
             <div>
-                <RegisterHeader />
+                <Header />
                 <br />
                 <br />
                 <RegisterForm />
