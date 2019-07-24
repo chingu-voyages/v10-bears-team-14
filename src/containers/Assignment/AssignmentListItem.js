@@ -28,7 +28,7 @@ class AssignmentListItem extends Component {
           <li>{this.props.instruction}</li>
         </ul> */}
 
-        {<Card style={{ width: '30%', margin: '5px' }}>
+        {<Card style={{ width: 'auto', marginBottom: '5px' }}>
           <Card.Body>
             <Card.Title>{this.props.name}
               <span style={{ position: "absolute", right: "0", margin: '10px' }}>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 import Header from '../../templates/Header';
 import AssignmentListItem from './AssignmentListItem'
 
@@ -52,26 +53,26 @@ class Assignment extends Component {
 
         return (
             <div>
-                <Header />
-                <h1>Assignments</h1>
+                <h3 style={{textAlign:'center'}}>Assignments</h3>
                 {assignmentList}
                 <form onSubmit={this.onSubmit}>
-                    <h3>Add Assignment</h3>
-                    <div className="form-group col-md-3" style={{clear:"both"}}>
+                    <br/>
+                    <h4>Add Assignment</h4>
+                    <div className="form-group" style={{clear:"both"}}>
                         <label htmlFor="formGroupExampleInput">Name</label>
                         <input type="text" className="form-control" id="formGroupExampleInput" onChange={(event) => this.onChange('name', event)} />
                     </div>
-                    <div className="form-group col-md-3" style={{clear:"both"}}>
+                    <div className="form-group" style={{clear:"both"}}>
                         <label htmlFor="formGroupExampleInput">URL</label>
                         <input type="text" className="form-control" id="formGroupExampleInput" onChange={(event) => this.onChange('url', event)} />
                     </div>
-                    <div className="form-group col-md-3" style={{clear:"both"}}>
+                    <div className="form-group" style={{clear:"both"}}>
                         <label htmlFor="formGroupExampleInput">Instruction</label>
                         <textarea type="text" className="form-control" id="formGroupExampleInput" onChange={(event) => this.onChange('instruction', event)} />
                     </div >
-                    <div className="form-group col-md-3" style={{clear:"both"}}>
-                        <input style={{clear:"both"}} type='submit' value='Add' />
-                    </div >
+                    <Button variant="warning" type="submit">
+                        Add Assignment
+                    </Button>
                     
                 </form>
             </div>
