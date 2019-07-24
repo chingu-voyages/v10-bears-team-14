@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import Header from '../../templates/Header';
+import Assignment from '../Assignment/Assignment'
 
 export default class CreateLearningPath extends Component {
 
@@ -51,10 +52,12 @@ export default class CreateLearningPath extends Component {
                                 />
                             </Col>
                         </Row>
+
+                        <Assignment />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
+                    <Button variant="success" type="submit">
+                        Submit Path
                     </Button>
 
                 </form>
