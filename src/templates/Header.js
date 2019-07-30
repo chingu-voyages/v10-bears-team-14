@@ -20,6 +20,11 @@ class Header extends React.Component {
                             <button className="btn btn-warning cBtn1">Assignments</button>
                         </Link>
                         </div>
+                        <div className='col-md-3'>
+                            <Link to="/profile">
+                                <button className="btn btn-warning cBtn1">Profile</button>
+                            </Link>
+                        </div>
                         <div className='col-md-2 '>
                         <Link to="/login/" >
                             <button className="btn btn-warning cBtn2">Sign in</button>

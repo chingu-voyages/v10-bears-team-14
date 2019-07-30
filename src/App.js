@@ -8,7 +8,7 @@ import LoginPage from './containers/Login/LoginPage.js'
 import RegisterPage from './containers/Register/RegisterPage.js'
 import CreateLearningPath from './containers/LearningPath/CreateLearningPath.js';
 import Assignment from './containers/Assignment/Assignment';
-
+import ProfilePage from './containers/Profile/ProfilePage';
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
           <Route path="/register" component={RegisterPage} />
           <Route path="/create" component={CreateLearningPath} />
           <Route path="/assignment" component={Assignment} />
+          <Route path="/profile" component={ProfilePage} />
           {/* <CreateLearningPath /> */}
           {/* <Assignment /> */}
         </div>

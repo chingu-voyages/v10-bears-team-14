@@ -1,0 +1,14 @@
+.interestBtn{
+    padding:0 5px;
+    background:#0000E3;
+    color:#DD8;
+    margin: 5px;
+    border: 1px solid #D5F
+}
+
+.delIcon{
+    padding:0 5px;
+    color: #ccc;
+    cursor: pointer;
+    fontStyle: normal
+}
