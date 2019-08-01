@@ -45,10 +45,15 @@ class Assignment extends Component {
         this.setState({ [type]: event.target.value })
     }
 
+    onDelete = (event, id) => {
+        event.preventDefault();
+        this.setState({ assignments : this.state.assignments.filter((assignment,index) => index!=id)});
+    }
+
     render() {
 
-        const assignmentList = this.state.assignments.map((assignment) => {
-            return <AssignmentListItem name={assignment.name} url={assignment.url} instruction={assignment.instruction} />
+        const assignmentList = this.state.assignments.map((assignment,index) => {
+            return <AssignmentListItem name={assignment.name} url={assignment.url} instruction={assignment.instruction} index={index} onDelete={this.onDelete}/>
         })
 
         return (
