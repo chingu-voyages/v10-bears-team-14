@@ -34,7 +34,7 @@ class AssignmentListItem extends Component {
               <span style={{ position: "absolute", right: "0", margin: '10px' }}>
                 <a href='https://www.google.com' activeClassName="active"><FontAwesomeIcon icon={faLink} style={{ marginRight: "15px" }} /></a>
                 <FontAwesomeIcon icon={faPencilAlt} style={{ marginRight: "20px", cursor: 'pointer' }} onClick={this.showModal} />
-                <FontAwesomeIcon icon={faTrash} style={{ marginRight: "15px" }} />
+                <FontAwesomeIcon icon={faTrash} style={{ marginRight: "15px", cursor:"pointer" }} onClick={(event)=>{this.props.onDelete(event,this.props.index)}}/>
               </span>
             </Card.Title>
             <Card.Text>
