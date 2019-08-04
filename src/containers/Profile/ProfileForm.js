@@ -16,6 +16,7 @@ class ProfileForm extends React.Component{
         this.handleInputChange=this.handleInputChange.bind(this);
         this.del=this.del.bind(this);
         this.addInterest=this.addInterest.bind(this);
+        this.handleSubmit=this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -25,12 +26,9 @@ class ProfileForm extends React.Component{
     validateEditable(){
         if(!this.props.editable)
         {
-            document.getElementById("form-country").disabled=true;
-            document.getElementById("addBtn").style.display="none";
+            //document.getElementById("addBtn").style.display="none";
             document.getElementsByClassName("delIcon").disabled=true;
-
         }
-
     }
 
     handleInputChange=(event)=>{
@@ -83,24 +81,41 @@ class ProfileForm extends React.Component{
 
     }
 
+    handleSubmit(event){
+
+    }
+
     render()
     {
+        const display=this.props.editable?"":"none";
+
+        //Interest Item List
         const interestList=this.state.interests.map((item,index)=> {
-            return <InterestListItem key={item?item:index} value={item} del={this.del} index={index}/>
+            return <InterestListItem key={item?item:index} value={item} del={this.del} index={index} display={display}/>
         });
+
+        //Country Input
+        const countryInput= this.props.editable? (<Form.Control name="country" defaultValue={this.state.country} type="text" onChange={this.handleInputChange} />):
+            (<h5>{this.state.country}</h5>);
+
+        //Add Interest Button
+        const addInterestBtn=this.props.editable? (<Button id="addBtn" onClick={this.addInterest}>add</Button>):(<div />);
+
+        //Save Profile Button
+        const saveBtn=this.props.editable? (<Button onClick={this.onSubmit}>Save</Button>):(<div />);
 
         return(
             <div>
                 <div className="col-md-8 col-md-offset-2"><h2>Profile</h2></div>
                 <div className="col-md-8 col-md-offset-2">
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <Form.Group controlId="form-username">
                         <Form.Label>username</Form.Label>
-                        <Form.Control type="text" value={this.props.username} disabled></Form.Control>
+                        <h5>{this.props.username}</h5>
                     </Form.Group>
                     <Form.Group controlId="form-country">
                         <Form.Label>country</Form.Label>
-                        <Form.Control name="country" defaultValue={this.state.country} type="text" onChange={this.handleInputChange}></Form.Control>
+                        {countryInput}
                     </Form.Group>
                     <Form.Group controlId="form-interest">
                         <Form.Label>Interest</Form.Label>
@@ -108,9 +123,14 @@ class ProfileForm extends React.Component{
                         <div className="btn-group">
                             {interestList}
                         </div>
-                        <Button id="addBtn" onClick={this.addInterest}>add</Button>
+                            {addInterestBtn}
+                        <br />
+                        <div>
+                            {saveBtn}
+                        </div>
                     </Form.Group>
                 </form>
+
                 </div>
             </div>
         )

@@ -9,7 +9,9 @@ import RegisterPage from './containers/Register/RegisterPage.js'
 import CreateLearningPath from './containers/LearningPath/CreateLearningPath.js';
 import Assignment from './containers/Assignment/Assignment';
 import ProfilePage from './containers/Profile/ProfilePage';
-
+import ShowCaseListPage from './containers/ShowCase/ShowCaseListPage'
+import PartListPage from "./containers/Participation/PartListPage";
+import PartItemPage from "./containers/Participation/PartItemPage";
 
 function App() {
   return (
@@ -21,7 +23,10 @@ function App() {
           <Route path="/register" component={RegisterPage} />
           <Route path="/create" component={CreateLearningPath} />
           <Route path="/assignment" component={Assignment} />
-          <Route path="/profile" component={ProfilePage} />
+          <Route path="/users/:userId" component={ProfilePage} />
+          <Route path="/showcases/:userId" component={ShowCaseListPage} />
+          <Route path="/participations/userId/:userId" component={PartListPage} />
+          <Route path="/participations/participationId/:participationId" component={PartItemPage} />
           {/* <CreateLearningPath /> */}
           {/* <Assignment /> */}
         </div>
